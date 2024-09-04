@@ -35,7 +35,7 @@ ophub_release_file="/etc/ophub-release"
 arch_info="$(arch)"
 #
 # The compile kernel scripts download repository
-script_repo="https://github.com/ophub/amlogic-s9xxx-armbian.git"
+script_repo="https://github.com/zcanbin/amlogic-s9xxx-armbian.git"
 script_dir="build-armbian/armbian-files/common-files/usr/share/ophub/armbian-software"
 #
 # Set font color

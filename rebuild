@@ -75,12 +75,12 @@ armbian_release_file="etc/armbian-release"
 ophub_release_file="etc/ophub-release"
 
 # U-BOOT files download repository
-uboot_repo="https://github.com/ophub/u-boot"
+uboot_repo="https://github.com/zcanbin/u-boot"
 # Firmware files download repository
-firmware_repo="https://github.com/ophub/firmware"
+firmware_repo="https://github.com/zcanbin/firmware"
 
 # Set the kernel download repository from github.com
-kernel_repo="https://github.com/ophub/kernel"
+kernel_repo="https://github.com/zcanbin/kernel"
 # Set the tags(kernel_xxx) of the default kernel that can be replaced via the [ -u ] parameter
 default_tags="stable"
 kernel_usage=""
@@ -1089,7 +1089,7 @@ refactor_rootfs() {
         echo "UBOOT_OVERLOAD='${UBOOT_OVERLOAD}'" >>${ophub_release_file}
     fi
     echo "BUILD_REPOSITORY='github.com/armbian/build'" >>${ophub_release_file}
-    echo "REBUILD_REPOSITORY='github.com/ophub/amlogic-s9xxx-armbian'" >>${ophub_release_file}
+    echo "REBUILD_REPOSITORY='github.com/zcanbin/amlogic-s9xxx-armbian'" >>${ophub_release_file}
     echo "CONTRIBUTORS='${CONTRIBUTORS}'" >>${ophub_release_file}
     echo "BUILDER_NAME='${builder_name}'" >>${ophub_release_file}
     echo "PACKAGED_DATE='$(date +%Y-%m-%d)'" >>${ophub_release_file}

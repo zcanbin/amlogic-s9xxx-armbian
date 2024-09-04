@@ -323,7 +323,7 @@ EOF
         sync && sleep 3
         echo -e "${NOTE} The bridge network settings: [ ${my_network_br0} ]"
         echo -e "${NOTE} KVM can install OpenWrt, Debian, Ubuntu, OpenSUSE, ArchLinux, Centos, Gentoo, KyLin, UOS, etc."
-        echo -e "${NOTE} Making and using OpenWrt: [ https://github.com/unifreq/openwrt_packit ]"
+        echo -e "${NOTE} Making and using OpenWrt: [ https://github.com/zcanbin/openwrt_packit ]"
         echo -e "${SUCCESS} The KVM installation is successful."
         ;;
     update) software_update ;;

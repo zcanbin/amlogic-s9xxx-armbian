@@ -63,7 +63,7 @@ initramfs_conf="/etc/initramfs-tools/update-initramfs.conf"
 ophub_release_file="/etc/ophub-release"
 
 # Set the default for downloading kernel sources from github.com
-repo_owner="unifreq"
+repo_owner="zcanbin"
 repo_branch="main"
 build_kernel=("6.1.y" "6.6.y")
 # Set whether to use the latest kernel, options: [ true / false ]
@@ -78,7 +78,7 @@ package_list="all"
 compress_format="xz"
 
 # Compile toolchain download mirror, run on Armbian
-dev_repo="https://github.com/ophub/kernel/releases/download/dev"
+dev_repo="https://github.com/zcanbin/kernel/releases/download/dev"
 # Arm GNU Toolchain source: https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
 gun_file="arm-gnu-toolchain-13.3.rel1-aarch64-aarch64-none-elf.tar.xz"
 # Set the toolchain path

@@ -192,10 +192,11 @@ on:
       kernel_repo:
         description: "Set the kernel repository."
         required: false
-        default: "ophub/kernel"
+        default: "zcanbin/kernel"
         type: choice
         options:
           - ophub/kernel
+          - zcanbin/kernel
       kernel_usage:
         description: "Set the tags of the stable kernel."
         required: false
@@ -292,7 +293,7 @@ jobs:
           df -hT ${PWD}
           git clone -q --single-branch --depth=1 --branch=main https://github.com/armbian/build.git build
           ln -sf /builder/build ${GITHUB_WORKSPACE}/build
-          ln -sf /builder/build /home/runner/work/_actions/ophub/amlogic-s9xxx-armbian/main/build
+          ln -sf /builder/build /home/runner/work/_actions/${GITHUB_REPOSITORY}/${GITHUB_REF_NAME}/build
           # 下载扩展的安装homeasssistant脚本
           wget -P ./build/extensions https://raw.githubusercontent.com/armbian/os/main/userpatches/extensions/docker-ce.sh
           wget -P ./build/extensions https://raw.githubusercontent.com/armbian/os/main/userpatches/extensions/ha.sh
@@ -335,7 +336,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Rebuild Armbian
-        uses: ophub/amlogic-s9xxx-armbian@main
+        uses: zcanbin/amlogic-s9xxx-armbian@main
         if: ${{ steps.clean.outputs.status }} == 'success' && !cancelled()
         with:
           build_target: armbian
